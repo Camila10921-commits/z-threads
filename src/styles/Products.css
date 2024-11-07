@@ -5,7 +5,7 @@ body {
     background-color: #121212;
     color: #ffffff;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 a {
@@ -20,7 +20,7 @@ a {
     padding: 20px;
     background-color: #121212;
     color: #ffffff;
-    min-height: 90vh; 
+    min-height: 90vh;
     padding-bottom: 50px;
 }
 
@@ -35,17 +35,22 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px; /* Consistent spacing between cards */
 }
 
 .product-card {
     background-color: #1A1A2E;
     border-radius: 10px;
     width: 250px;
+    height: 400px; /* Fixed height for all cards */
     padding: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s;
     text-align: center;
     margin: 10px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
 }
 
 .product-card:hover {
@@ -54,7 +59,8 @@ a {
 
 .product-card img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Maintains aspect ratio while covering area */
     border-radius: 10px;
 }
 
@@ -62,27 +68,68 @@ a {
     color: #ffffff;
     font-size: 1.2em;
     margin: 10px 0;
+    /* Handle long titles */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
 }
 
 .product-card p {
     color: #C0C0C0;
     font-size: 0.9em;
-    margin: 0;
+    margin: 10px 0;
     font-weight: 400;
 }
 
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centra la calabaza en la pantalla */
+  }
+  
+  .pumpkin {
+    width: 80px; /* Ajusta el tamaño de la calabaza */
+    height: 80px;
+    animation: spinPumpkin 2s linear infinite; /* Animación de rotación */
+  }
+  
+  @keyframes spinPumpkin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
 .product-button {
     font-family: roboto;
-    background-color: #6C5CE7; 
+    background-color: #6C5CE7;
     color: #ffffff;
     border: none;
     padding: 0.5rem 1rem;
-    margin-top: 0.5rem;
+    margin-top: auto; /* Pushes button to bottom */
     cursor: pointer;
     transition: background-color 0.3s;
     border-radius: 5px;
+    width: 80%;
+    align-self: center;
 }
 
 .product-button:hover {
-    background-color: #1e90ff; 
+    background-color: #1e90ff;
 }
+
+.add-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+ 

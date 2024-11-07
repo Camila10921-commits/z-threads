@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Products.css';
 import Footer from '../components/Footer';
+import pumpkinImage from '../../src/Images/pumpink.png'; // Ruta de la imagen de calabaza
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -25,7 +26,11 @@ const Products = () => {
   };
 
   if (loading) {
-    return <div className="loading">Cargando productos...</div>;
+    return (
+      <div className="loading">
+        <img src={pumpkinImage} alt="Calabaza girando" className="pumpkin" /> {/* Calabaza girando */}
+      </div>
+    );
   }
 
   if (error) {
