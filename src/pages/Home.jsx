@@ -26,7 +26,7 @@ const Home = () => {
             </header>
 
             <section className="alerts-section">
-                <h2>Avisos Importantes!</h2>
+                <h2>Avisos Importantes</h2>
                 <div className="alerts-cards">
                     <div className="alert-card">
                         <h3>Aviso Crítico</h3>
@@ -68,12 +68,13 @@ const Home = () => {
             </section>
 
             <section className="contact-section">
-                <h2>Contacta con Nosotros</h2>
-                <p>Email: zombieT@gmail.com</p>
-                <p>Teléfono: +123 456 789</p>
-                <p>Dirección: Calle flores 123, Bogota, Colombia</p>
+                <div className="contact-container">
+                    <h2>Contáctanos</h2>
+                    <p>¿Tienes alguna pregunta o duda? ¡Estamos aquí para ayudarte!</p>
+                    <p>Correo electrónico: zombieT@gmail.com</p>
+                    <p>Teléfono: +123 456 7890</p>
+                </div>
             </section>
-
             <Footer />
         </div>
     );
