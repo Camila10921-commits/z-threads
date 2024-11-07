@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #121212;
@@ -26,7 +24,8 @@ a {
 
 .products h2 {
     margin-bottom: 20px;
-    color: #00FFC2;
+    color: #0ed948;
+    font-family: Creepster;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -35,17 +34,18 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Consistent spacing between cards */
+    gap: 20px;
 }
 
 .product-card {
     background-color: #1A1A2E;
+    border: 2px solid #abaead; 
     border-radius: 10px;
     width: 250px;
-    height: 400px; /* Fixed height for all cards */
+    height: 400px;
     padding: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 255, 194, 0.3); 
+    transition: transform 0.2s, box-shadow 0.2s;
     text-align: center;
     margin: 10px;
     display: flex;
@@ -55,12 +55,13 @@ a {
 
 .product-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 255, 194, 0.7); 
 }
 
 .product-card img {
     width: 100%;
-    height: 200px; /* Fixed height for images */
-    object-fit: cover; /* Maintains aspect ratio while covering area */
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -68,7 +69,6 @@ a {
     color: #ffffff;
     font-size: 1.2em;
     margin: 10px 0;
-    /* Handle long titles */
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -80,56 +80,41 @@ a {
     color: #C0C0C0;
     font-size: 0.9em;
     margin: 10px 0;
-    font-weight: 400;
 }
 
-.loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Centra la calabaza en la pantalla */
-  }
-  
-  .pumpkin {
-    width: 80px; /* Ajusta el tamaño de la calabaza */
-    height: 80px;
-    animation: spinPumpkin 2s linear infinite; /* Animación de rotación */
-  }
-  
-  @keyframes spinPumpkin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
 .product-button {
-    font-family: roboto;
-    background-color: #6C5CE7;
+    background-color: #00FF5E; /* Verde acorde al tema */
     color: #ffffff;
     border: none;
     padding: 0.5rem 1rem;
-    margin-top: auto; /* Pushes button to bottom */
+    margin-top: auto;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
     border-radius: 5px;
     width: 80%;
     align-self: center;
 }
 
 .product-button:hover {
-    background-color: #1e90ff;
+    background-color: #00FFC2; 
+    box-shadow: 0 0 10px #00FFC2; 
 }
 
 .add-to-cart-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #007bff;
+    background-color: #00FFC2;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
- 
+    transition: background-color 0.3s ease, box-shadow 0.3s;
+}
+
+.add-to-cart-button:hover {
+    background-color: #00FF5E;
+    box-shadow: 0 0 10px #00FF5E;
+}

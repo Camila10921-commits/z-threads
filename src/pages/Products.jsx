@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Products.css';
 import Footer from '../components/Footer';
-import pumpkinImage from '../../src/Images/pumpink.png'; // Ruta de la imagen de calabaza
+import pumpkinImage from '../../src/Images/pumpink.png'; 
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -61,4 +61,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Products
