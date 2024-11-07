@@ -1,50 +1,70 @@
 import '../styles/Home.css';
-import Footer from '../components/Footer'; 
-import rachetlogo from '../assets/rachetlogo.jpg';
-import halologo from '../assets/halologo.webp';
-import residentlogo from '../assets/residentlogo.jpg'
+import Footer from '../components/Footer';
+import logozombie2 from '../assets/logozombie2.png';
+import cazadoraImage from '../assets/cazadora.jpg';
+import botasImage from '../assets/botas.webp';
+import guantesImage from '../assets/guantes.jpg';
 
 const Home = () => {
     return (
         <div className="home-container">
             <header className="header-section">
-                <h1>Bienvenidos a GamerE Pro</h1>
-                <p>Encuentra las mejores ofertas y productos destacados</p>
+                <div className="header-content">
+                    <img src={logozombie2} alt="Zombie" className="header-image" />
+                    <div className="header-text">
+                        <h1>Zombie Threads</h1>
+                        <p>Equípate para el fin del mundo con estilo.</p>
+                    </div>
+                </div>
             </header>
 
             <section className="alerts-section">
-                <h2>Avisos</h2>
+                <h2>Avisos Importantes</h2>
                 <div className="alerts-cards">
                     <div className="alert-card">
-                        <h3>Aviso Importante</h3>
-                        <p>Recuerda que si tienes algún problema, puedes escribirnos a nuestro WhatsApp.</p>
+                        <h3>Aviso Crítico</h3>
+                        <p>Asegúrate de tener siempre tu equipo listo para cualquier eventualidad.</p>
                     </div>
                     <div className="alert-card">
-                        <h3>¡Aviso Especial!</h3>
-                        <p>Recuerda que el horario de atención ha cambiado.</p>
+                        <h3>¡Atención!</h3>
+                        <p>Los horarios de entrega pueden variar debido a condiciones climáticas.</p>
+                    </div>
+                    <div className="alert-card">
+                        <h3>Nuevo Producto</h3>
+                        <p>¡Acabamos de agregar nuevas prendas zombie a nuestra colección! No te lo pierdas.</p>
                     </div>
                 </div>
             </section>
 
             <section className="offers-section">
-                <h2>Ofertas Especiales</h2>
+                <h2>Ofertas de Ropa</h2>
                 <div className="offers-cards">
                     <div className="offer-card">
-                        <img src={halologo} alt="Logo Halo" />
-                        <h3>Halo: the master chief collection</h3>
-                        <p>¡Descuento del 50%!</p>
+                        <img src={cazadoraImage} alt="Cazadora de Sobreviviente" className="offer-image" />
+                        <h3>Cazadora de Sobreviviente</h3>
+                        <p>50% de descuento en cazadoras resistentes al clima.</p>
+                        <div className="availability-box">6 unidades disponibles</div>
                     </div>
                     <div className="offer-card">
-                        <img src={rachetlogo} alt="Logo Rachet" />
-                        <h3>Ratchet & Clank: Una dimensión aparte</h3>
-                        <p>¡Descuento del 30%!</p>
+                        <img src={botasImage} alt="Botas Todo Terreno" className="offer-image" />
+                        <h3>Botas Todo Terreno</h3>
+                        <p>30% de descuento en botas perfectas para cualquier terreno.</p>
+                        <div className="availability-box">10 unidades disponibles</div>
                     </div>
                     <div className="offer-card">
-                        <img src={residentlogo} alt="Logo resident" />
-                        <h3>Resident Evil</h3>
-                        <p>¡Descuento del 15%!</p>
+                        <img src={guantesImage} alt="Guantes de Protección" className="offer-image" />
+                        <h3>Guantes de Protección</h3>
+                        <p>Compra 2 pares y lleva el segundo con un 70% de descuento.</p>
+                        <div className="availability-box">15 unidades disponibles</div>
                     </div>
                 </div>
+            </section>
+
+            <section className="contact-section">
+                <h2>Contacta con Nosotros</h2>
+                <p>Email: zombieT@gmail.com</p>
+                <p>Teléfono: +123 456 789</p>
+                <p>Dirección: Calle flores 123, Bogota, Colombia</p>
             </section>
 
             <Footer />
