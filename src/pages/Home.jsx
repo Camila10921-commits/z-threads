@@ -19,7 +19,7 @@ const Home = () => {
             </header>
 
             <section className="alerts-section">
-                <h2>Avisos Importantes</h2>
+                <h2>Avisos Importantes!</h2>
                 <div className="alerts-cards">
                     <div className="alert-card">
                         <h3>Aviso Crítico</h3>
